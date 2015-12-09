@@ -19,5 +19,10 @@ class EntriesController < ApplicationController
 		entry.update(entry_params)
 		redirect_to(entry_path(entry))
 	end
+	def delete
+		@entries = Entry.find(params["id"])
+		@entries.destroy
+		redirect_to(entry_path)
+	end
 
 end
