@@ -24,8 +24,8 @@ class EntriesController < ApplicationController
 		@entry.destroy
 		redirect_to(entries_path)
 	end
-	def datesomething
-		@days = (Date.parse(params[:date]) - Date.parse(Time.now.to_s)).to_i
-	end
+#	def datesomething
+#		@days = (Date.parse(params[:date]) - Date.parse(Time.now.to_s)).to_i
+#	end
 
 end
