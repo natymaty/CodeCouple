@@ -3,29 +3,10 @@
 <p><%= @entry.contents %></p>
 
 <h2> Comments </h2>
-<% @entry.comments.each do |comment| %>
-  <p>
-    <strong> Commenter: </strong>
-    <%= comment.commenter %>
-  </p>
-  <p>
-    <strong> Comment: </strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<%= render @entry.comments %>
 
 <h2> Add a comment </h2>
-<%= form_for([@entry, @entry.comments.build]) do |form| %>
-  <p>
-    <%= form.label :commenter %> <br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %> <br>
-    <%= form.text_area :body %>
-  </p>
-  <p> <%= form.submit %> </p>
-<% end %>
+<%= render 'comments/form' %>
 
 <p><%= link_to("Edit this entry", edit_entry_path(@entry)) %></p>
 <p><%= link_to("Back to all entries", entries_path) %></p>

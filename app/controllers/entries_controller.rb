@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
-	def index
+	http_basic_authenticate_with name: "Klausthezebra", password: "monkeysareannoying", except: [:index, :show]
+  def index
 		@entries = Entry.order(date: :desc)
 	end
 
