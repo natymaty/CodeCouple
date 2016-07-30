@@ -40,3 +40,7 @@
 	float: right;
 
 }
+#blog h2 {
+	font-style: italic;
+	font-size: 35px;
+}
