@@ -14,19 +14,29 @@
  *= require_self
  */
  body {
-  background-color: light-blue;
+  background-color: rgb(255, 210, 209);
+  margin: 0;
+  padding: 0;
 }
 #blog {
-  background-color: gray;
-  width: 60%;
-  
+  background-color: rgb(196, 255, 198);
+  width: 70%;
+  text-align: center;
   margin: auto;
-  border: 2px solid;
-
+  padding: 5px;
+  
 }
 #logo {
-  margin: auto;
-  
+ 	text-align: center;
+ 	margin: 0;
+ 	padding: 0;
 }
+.navbar {
+	width: 70%;
+	margin: auto;
+	padding: 0;
+}
+.floatright {
+	float: right;
 
-
+}
