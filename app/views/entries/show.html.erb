@@ -1,6 +1,6 @@
-<h2><%= @entry.title %></h2>
+<h1 class="post-title"><%= @entry.title %></h1>
 <p><%= @entry.date %></p>
-<p><%= @entry.contents %></p>
+<p class="post-content"><%= @entry.contents %></p>
 
 <h2> Comments </h2>
 <%= render @entry.comments %>
