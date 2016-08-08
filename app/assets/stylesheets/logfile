@@ -5,3 +5,7 @@ LOG:  autovacuum launcher started
 FATAL:  database "diary_development" does not exist
 FATAL:  database "diary_development" does not exist
 FATAL:  database "diary_test" does not exist
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
