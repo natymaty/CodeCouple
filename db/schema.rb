@@ -13,25 +13,22 @@
 
 ActiveRecord::Schema.define(version: 20160719135933) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "comments", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "entry_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "commenter",  limit: 255
+    t.text     "body",       limit: 65535
+    t.integer  "entry_id",   limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   add_index "comments", ["entry_id"], name: "index_comments_on_entry_id", using: :btree
 
   create_table "entries", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",      limit: 255
     t.date     "date"
-    t.text     "contents"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "contents",   limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   add_foreign_key "comments", "entries"
