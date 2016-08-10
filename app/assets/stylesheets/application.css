@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  background-color: blue; 
+  margin: 0;
+  padding: 0;
+}
+#blog {
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  padding: 25px 100px 50px 100px;
+  border: solid;
+}
+#logo {
+ 	text-align: center;
+ 	margin: 0;
+ 	padding: 0;
+}
+.navbar {
+	width: 70%;
+	margin: auto;
+	padding: 0;
+}
+.post-title {
+	color: black;
+	text-decoration: none;
+}
+.post-title:hover {
+	color: gray;
+	text-decoration: none;
+}
+.post-content {
+	padding: 
+}

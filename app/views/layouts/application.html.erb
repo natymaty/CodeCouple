@@ -5,11 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-  <h1> Code Couple </h1>
-    <h2>our stories </h2>
-<%= yield %>
-
+  <div id="logo">
+  	<a title="home" href="/"><img src="/assets/logo.jpg" alt="logo" /></a>
+  </div>
+  <nav class="navbar navbar-default">
+  	<div class="container-fluid">
+      <ul class="nav navbar-nav">
+      	<li class="active"><a href="#">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">  
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Pictures</a></li> 
+        <li><a href="#">Contact</a></li> 
+      </ul>
+    </div>
+  </nav>
+  <div class="well" id="blog">
+	<%= yield %>
+  </div>
 </body>
 </html>
