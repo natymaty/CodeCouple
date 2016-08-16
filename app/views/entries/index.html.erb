@@ -1,7 +1,9 @@
   <div>
     <% for entry in @entries %>
-	  	<h1><%= link_to entry.title, entry_path(entry), class: 'post-title' %></h1>
-	    <p><%= entry.created_at %></p>
-	  	<p class="post-content"><%= entry.contents %></p>
+    	<div id="postwrapper">
+	  		<span id="entryTitle"><%= link_to entry.title, entry_path(entry), class: 'post-title' %></span><span id="blogDate"><%= entry.created_at %></span>
+	  		<p id="blogContent" class="post-content"><%= entry.contents %></p>
+	  		<p id="entryAuthor">Written by:</p>
+			</div>
 		<% end %>
   </div>

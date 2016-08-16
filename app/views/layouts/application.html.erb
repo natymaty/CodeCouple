@@ -8,23 +8,25 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-  <div id="logo">
-  	<a title="home" href="/"><img src="/assets/logo.jpg" alt="logo" /></a>
-  </div>
-  <nav class="navbar navbar-default">
-  	<div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
       <ul class="nav navbar-nav">
-      	<li class="active"><a href="/">Home</a></li>
+        <li class="active"><a class="navbar-brand" href="/">CodeCouple</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/about">About Us</a></li>
+        <li><a href="/about">About Us</a></li> 
         <li><a href="/pictures">Pictures</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <div class="well" id="blog">
-	<%= yield %>
+  <div class="wrapper">
+    <div id="logo" class="jumbotron">
+    	<a title="home" href="/"><img src="/assets/logo.jpg" alt="logo" /></a>
+    </div>
+    <div class="well" id="blog">
+  	<%= yield %>
+    </div>
   </div>
 </body>
 </html>

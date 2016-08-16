@@ -13,27 +13,40 @@
  *= require_tree .
  *= require_self
  */
- body {
-  background-color: blue; 
+ 
+ body { 
   margin: 0;
   padding: 0;
 }
-#blog {
-  background-color: white;
-  width: 70%;
-  margin: auto;
-  padding: 25px 100px 50px 100px;
-  border: solid;
+
+/* Navbar */
+/* change to button menu at 768px */
+.navbar {
+	width: 100%;
+	margin-bottom: 0 !important;
+}
+
+.navbar-default {
+	margin: 0;
+}
+
+/* Jumbotron and Wrapper */
+.wrapper {
+	margin-top: 50px;
 }
 #logo {
  	text-align: center;
  	margin: 0;
  	padding: 0;
-}
-.navbar {
-	width: 70%;
-	margin: auto;
-	padding: 0;
+ }
+
+/* Blog */
+#blog {
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  padding: 25px 50px 50px 50px;
+  border: solid;
 }
 .post-title {
 	color: black;
@@ -43,6 +56,4 @@
 	color: gray;
 	text-decoration: none;
 }
-.post-content {
-	padding: 
-}
+
