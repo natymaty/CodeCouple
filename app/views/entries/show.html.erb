@@ -1,5 +1,10 @@
 <h1 class="post-title"><%= @entry.title %></h1>
 <p><%= @entry.created_at %></p>
+<% if @entry.avatar.file? %>
+  <%= image_tag @entry.avatar.url %>
+<% else %>
+  <br>
+<% end %>
 <p class="post-content"><%= @entry.contents %></p>
 <p> Written by: <%= @entry.author %> </p>
 
