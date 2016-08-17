@@ -1,6 +1,7 @@
 <h1 class="post-title"><%= @entry.title %></h1>
 <p><%= @entry.created_at %></p>
 <p class="post-content"><%= @entry.contents %></p>
+<p> Written by: <%= @entry.author %> </p>
 
 <h2> Comments </h2>
 <%= render @entry.comments %>
