@@ -1,3 +1,22 @@
-// Place all the styles related to the Entries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=dosis');
+
+#entryTitle {
+	font-size: 40px;
+	font-family: dosis;
+}
+#blogDate {
+	float: right;
+	font-style: italic;
+}
+.post-content {
+	font-size: 16px;
+	font-family: dosis;
+}
+#postwrapper {
+	border-bottom: solid;
+	border-width: 2px;
+}
+#entryAuthor {
+	font-style: italic;
+	text-align: right;
+}
