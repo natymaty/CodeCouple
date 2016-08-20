@@ -1,13 +1,13 @@
   <div>
     <% for entry in @entries %>
     	<div id="postwrapper">
-	  		<span id="entryTitle"><%= link_to entry.title, entry_path(entry), class: 'post-title' %></span><span id="blogDate"><%= entry.created_at %></span>
+	  		<span id="entryTitle"><%= link_to entry.title, entry_path(entry), class: 'post-title' %></span><span id="blogDate"><%= entry.created_at.to_date %></span>
 	  		<p><% if entry.avatar.file? %>
   				<%= image_tag entry.avatar.url(:medium) %>
 			<% else %>
   				<br>
 			<% end %></p>
-	  		<p id="blogContent" class="post-content"><%= entry.contents %></p>
+      <p id="blogContent" class="post-content"><%= truncate(entry.contents, length: 200) %> <%=link_to "Read the whole post!", entry_path(entry) %></p>
 	  		<p id="entryAuthor">Written by:<%= entry.author %></p>
 			</div>
 		<% end %>
