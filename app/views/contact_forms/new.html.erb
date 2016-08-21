@@ -1,0 +1,14 @@
+<h1> Do you like us? </h1>
+<p> Awww
+<br>
+Tell us why! :) </p>
+
+<%= form_for @contact_form do |form| %>
+  <p><%= form.label("name") %></p>
+  <p><%= form.text_field :name, :required => true %></p>
+  <p><%= form.label("email") %></p>
+  <p><%= form.text_field :email, :required => true %></p>
+  <p><%= form.label("message") %></p>
+  <p><%= form.text_area("message") %></p>
+  <p><%= form.submit "Send" %></p>
+<% end %>
