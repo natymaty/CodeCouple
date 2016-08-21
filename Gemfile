@@ -35,6 +35,7 @@ gem 'puma'
 
 gem "paperclip", "~> 5.0.0"
 
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'mail_form'
 
 # Use Capistrano for deployment
