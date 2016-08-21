@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   root 'entries#index'
 
   match '/about', to: 'pages#about', via: [:get, :post]
-  match '/pictures', to: 'pages#pictures', via: [:get, :post]
+ #match '/pictures', to: 'pages#pictures', via: [:get, :post]
   match '/contact', to: 'contact_forms#new', via: [:get, :post]
 end

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Code Couple</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -26,7 +27,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/about">About Us</a></li>
-        <li><a href="/pictures">Pictures</a></li>
+        <!-- <li><a href="/pictures">Pictures</a></li> -->
         <li><a href="/contact">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -35,7 +36,7 @@
   <div class="wrapper">
     <img id="logoimg" src="/assets/logo.png" alt="logo" />
     <div id="blog">
-        <%= yield %>  
+        <%= yield %>
     </div>
   </div>
 </body>
