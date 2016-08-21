@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
- 
+@import "entries.scss";
+@import "comments.scss";
+@import "pages.scss";
+@import "contact_forms.scss";
  body { 
   margin: 0;
   padding: 0;
