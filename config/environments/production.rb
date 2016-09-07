@@ -76,4 +76,25 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
+
+	config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.default_url_options = { :host => 'https://codecouple.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => "587",
+    :domain => "https://codecouple.herokuapp.com",
+    :user_name => "info.codecouple@gmail.com",
+    :password => "monkeysareannoying",
+    :authentication => "plain",
+    :enable_starttls_auto => true
+  }
 end
