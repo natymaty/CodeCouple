@@ -7,29 +7,41 @@
  body { 
   margin: 0;
   padding: 0;
-  background-color: #AC8A57;
+  /*background-color: #f09275;*/
+  /*background-color: #AC8A57;*/
+  background-color: #FCF5EA;
 }
 
 /* Navbar */
 /* change to button menu at 768px */
 .navbar {
 	width: 100%;
-	margin-bottom: 0 !important;
-	padding-bottom: 0 !important;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	padding-left: 15%;
+	/*background-color: #796649;*/
 	background-color: #796649;
 	border: none;
-	border-bottom: solid 3px;
-	border-left: solid 20px;
-	border-color: #58f7d4;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height:0;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav li a {
     color: white;
 }
+.navbar-default li a:hover {
+	background-color: #58f7d4 !important;
+}
+
 .navbar-brand {
 	color: white !important;
+
 }
 .navbar-brand:hover {
 	color: black !important;
+	background-color: #58f7d4 !important;
 }
 
 /* Logo and Wrapper */
@@ -40,9 +52,9 @@
 	width: 100%;
 	max-width: 1000px;
 }
-
-.wrapper {
-	margin-top: 35px;
+#logodiv {
+	background-color: #796649;
+	padding-top: 35px;
 }
 
 /* Blog */
@@ -51,13 +63,13 @@
 	margin-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;	
+	margin-top: 20px;
 	background-color: white;
 	padding: 25px 50px 50px 50px;
-	outline-color: rgba(255, 255, 255, .2);
+	/*outline-color: rgba(255, 255, 255, .2);
 	outline-style: solid;
-	outline-width: 10px;
+	outline-width: 10px;*/
 }
-
 .post-title {
 	color: black;
 	text-decoration: none;
@@ -66,4 +78,32 @@
 	color: gray;
 	text-decoration: none;
 }
+
+
+/* Footer */
+.footer {
+	border-top: solid;
+	border-width: 2px;
+	border-color: gray;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	margin-top: 50px;
+}
+#madeBy{
+	text-align: center;
+	color: gray;
+	padding-top: 20px;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+  	#blog {
+  		width: 100%;
+  		margin-top: 0;
+  	}
+
+  }
 
