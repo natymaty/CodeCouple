@@ -1,18 +1,22 @@
-<h1 class="post-title"><%= @entry.title %></h1>
-<p><%= @entry.created_at %></p>
+<span class= 'entryTitle'>
+	<%= @entry.title %>
+</span>
+<p id="blogDate"><%= @entry.created_at.to_date %></p>
+<br>
 <% if @entry.avatar.file? %>
   <%= image_tag @entry.avatar.url %>
 <% else %>
-  <br>
+<br>
 <% end %>
 <p class="post-content"><%= @entry.contents %></p>
-<p> Written by: <%= @entry.author %> </p>
+<p id="entryAuthor"> Written by: <%= @entry.author %> </p>
+<div id="commentdiv">
+	<h2> Comments </h2>
+	<%= render @entry.comments %>
 
-<h2> Comments </h2>
-<%= render @entry.comments %>
+	<h2> Add a comment </h3>
+	<%= render 'comments/form' %>
 
-<h2> Add a comment </h2>
-<%= render 'comments/form' %>
-
-<p><%= link_to("Back to all entries", entries_path) %></p>
+	<p><%= link_to("Back to all entries", entries_path) %></p>
+</div>
 
