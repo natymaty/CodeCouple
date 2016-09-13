@@ -4,12 +4,28 @@
 @import "comments.scss";
 @import "pages.scss";
 @import "contact_forms.scss";
- body { 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+$roboto-slab: 'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+body {
   margin: 0;
   padding: 0;
   /*background-color: #f09275;*/
   /*background-color: #AC8A57;*/
   background-color: #FCF5EA;
+}
+
+p, a {
+	font-family: $open-sans;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $roboto-slab;
+  font-weight: normal;
 }
 
 /* Navbar */
