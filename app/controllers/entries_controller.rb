@@ -43,7 +43,7 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params["entry"].permit("title", "contents", "author", "avatar")
+      params["entry"].permit("title", "contents", "author", "avatar", "youtube_url")
     end
 
 #	def datesomething

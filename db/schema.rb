@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817112908) do
+ActiveRecord::Schema.define(version: 20160927115358) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter",  limit: 255
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160817112908) do
     t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
+    t.string   "youtube_url",         limit: 255
   end
 
   add_foreign_key "comments", "entries"
