@@ -1,19 +1,22 @@
-  <div>
-    <% for entry in @entries %>
-    	<div id="postwrapper">
-	  		<span>
-	  		<%= link_to entry.title, entry_path(entry), class: 'entryTitle' %>
-	  		</span>
-	  		<span id="blogDate"><%= entry.created_at.to_date %></span>
-	  		<p><% if entry.avatar.file? %>
-  				<%= image_tag entry.avatar.url(:medium) %>
-			<% else %>
-  				<br>
-			<% end %>
-			</p>
-      		<p id="blogContent" class="post-content"><%= truncate(entry.contents, length: 200) %> <%=link_to "Read the whole post!", entry_path(entry), class: 'readmorelink' %>
-      		</p>
-	  		<p id="entryAuthor">Written by: <%= entry.author %></p>
+<div>
+  <% for entry in @entries %>
+    <div id="postwrapper">
+      <span>
+      <%= link_to entry.title, entry_path(entry), class: 'entryTitle' %>
+      </span>
+      <span id="blogDate"><%= entry.created_at.to_date %></span>
+			<% if entry.youtube_url.present? %>
+        <div class="embed-container">
+					<%= embed(entry.youtube_url) %>
+        </div>
+			<% elsif entry.avatar.file? %>
+        <%= image_tag entry.avatar.url(:medium) %>
+      <% else %>
+        <br>
+      <% end %>
+      <p id="blogContent" class="post-content"><%= truncate(entry.contents, length: 200) %> <%=link_to "Read the whole post!", entry_path(entry), class: 'readmorelink' %>
+      </p>
+      <p id="entryAuthor">Written by: <%= entry.author %></p>
 		</div>
 		<br>
 	<% end %>
