@@ -13,7 +13,7 @@
     <%= embed(@entry.youtube_url) %>
   </div>
 <% end %>
-<p class="post-content"><%= @entry.contents %></p>
+<p class="post-content"><%= simple_format(@entry.contents) %></p>
 <p id="entryAuthor"> Written by: <%= @entry.author %> </p>
 <div id="commentdiv">
 	<h2> Comments </h2>

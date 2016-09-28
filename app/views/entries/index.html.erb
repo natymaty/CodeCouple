@@ -5,7 +5,7 @@
       <%= link_to entry.title, entry_path(entry), class: 'entryTitle' %>
       </span>
       <span id="blogDate"><%= entry.created_at.to_date %></span>
-			<% if entry.youtube_url.present? %>
+      <p><% if entry.youtube_url.present? %>
         <div class="embed-container">
 					<%= embed(entry.youtube_url) %>
         </div>
@@ -14,6 +14,7 @@
       <% else %>
         <br>
       <% end %>
+      </p>
       <p id="blogContent" class="post-content"><%= truncate(entry.contents, length: 200) %> <%=link_to "Read the whole post!", entry_path(entry), class: 'readmorelink' %>
       </p>
       <p id="entryAuthor">Written by: <%= entry.author %></p>
