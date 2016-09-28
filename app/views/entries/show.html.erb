@@ -8,6 +8,11 @@
 <% else %>
 <br>
 <% end %>
+<% if @entry.youtube_url.present? %>
+  <div class="embed-container">
+    <%= embed(@entry.youtube_url) %>
+  </div>
+<% end %>
 <p class="post-content"><%= @entry.contents %></p>
 <p id="entryAuthor"> Written by: <%= @entry.author %> </p>
 <div id="commentdiv">
