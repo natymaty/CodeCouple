@@ -1,3 +1,13 @@
 // Place all the styles related to the contact_form controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "entries";
+
+.form {
+	width: 300px;
+	height: 30px;
+}
+.formText {
+	width: 500px;
+	height: 250px;
+}

@@ -1,11 +1,11 @@
 <%= form_for ([@entry, @entry.comments.build]) do |form| %>
   <p>
     <%= form.label("your name") %> <br>
-    <%= form.text_field("commenter") %>
+    <%= form.text_field :commenter, class: 'form' %>
   </p>
   <p>
     <%= form.label("so, what do you think?:)") %> <br>
-    <%= form.text_area("body") %>
+    <%= form.text_area :body, class: 'formComment' %>
   </p>
   <p>
     <%= form.submit %>
