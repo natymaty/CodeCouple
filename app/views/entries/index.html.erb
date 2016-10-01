@@ -10,7 +10,7 @@
 					<%= embed(entry.youtube_url) %>
         </div>
 			<% elsif entry.avatar.file? %>
-        <%= image_tag entry.avatar.url(:medium) %>
+        <%= image_tag entry.avatar.url, class: 'indexImg' %>
       <% else %>
         <br>
       <% end %>
