@@ -8,6 +8,11 @@
 	height: 30px;
 }
 .formText {
-	width: 500px;
+	width: 450px;
 	height: 250px;
+}
+@media only screen and (max-width: 768px) {
+	.formText {
+	width: 300px;
+	}
 }
